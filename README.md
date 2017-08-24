@@ -95,4 +95,4 @@ If you want to see working examples, checkout the [tests](https://github.com/cam
 
 Be aware that there are some DES/3DES/AES implementation differences between devices, as DES has many modes (ECB, CBC, CFB, OFB, ...). If it doesn't work, try another mode...
 
-
+This goal for this fork is to make the library compatible with PHP 7 and above.

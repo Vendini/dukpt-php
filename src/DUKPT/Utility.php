@@ -2,7 +2,6 @@
 
 namespace DUKPT;
 
-use Crypt;
 use phpseclib\Crypt\TripleDES;
 
 class Utility
@@ -196,7 +195,7 @@ class Utility
      */
     public static function desEncrypt($hexData, $hexKey)
     {
-        $encryptedData = mcrypt_encrypt(MCRYPT_DES, self::hex2bin($hexKey), self::hex2bin($hexData), MCRYPT_MODE_ECB);
+        $encryptedData = openssl_encrypt(self::hex2bin($hexData), 'DES-ECB' , self::hex2bin($hexKey), OPENSSL_RAW_DATA|OPENSSL_ZERO_PADDING);
         return strtoupper(bin2hex($encryptedData));
     }
 
@@ -213,7 +212,7 @@ class Utility
      */
     public static function desDecrypt($hexData, $hexKey)
     {
-        $decryptedData = mcrypt_decrypt(MCRYPT_DES, self::hex2bin($hexKey), self::hex2bin($hexData), MCRYPT_MODE_ECB);
+        $decryptedData = openssl_decrypt(self::hex2bin($hexData), 'DES-ECB' , self::hex2bin($hexKey), OPENSSL_RAW_DATA|OPENSSL_ZERO_PADDING);
         return strtoupper(bin2hex($decryptedData));
     }
 
