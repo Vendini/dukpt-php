@@ -1,8 +1,4 @@
-# camcima/dukpt-php #
-
-[![Scrutinizer Continuous Inspections](https://scrutinizer-ci.com/g/camcima/dukpt-php/badges/general.png?s=f09827625e225aba7fee07e459c206b915110bf6)](https://scrutinizer-ci.com/g/camcima/dukpt-php/)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/camcima/dukpt-php/badges/quality-score.png?s=f07fa733dff54e72f15e451bb1fda98a0fc2a27a)](https://scrutinizer-ci.com/g/camcima/dukpt-php/)
-[![Code Coverage](https://scrutinizer-ci.com/g/camcima/dukpt-php/badges/coverage.png?s=fcf8931173798e3a38a7a787deb8b9364a9ef36c)](https://scrutinizer-ci.com/g/camcima/dukpt-php/)
+# vendini/dukpt-php #
 
 A library to handle [DUKPT](http://en.wikipedia.org/wiki/Derived_unique_key_per_transaction "DUKPT") decryption.
 
@@ -49,7 +45,7 @@ The device I had used the `Data Request Key` to encrypt the credit card data.
 ```
 "require": {
 ...
-"camcima/dukpt-php": "dev-master"
+"vendini/dukpt-php": "dev-master"
 }
 ```
 
@@ -89,10 +85,10 @@ $decryptedData = Utility::hex2bin(
 
 The last parameter of the `tripleDesDecrypt` method changes the encryption mode to CBC3 (true), while the normal mode is ECB. I did this because we tested a chinese device that used this DES mode.
 
-If you want to see working examples, checkout the [tests](https://github.com/camcima/dukpt-php/tree/master/src/DUKPT/Test "tests").
+If you want to see working examples, checkout the [tests](https://github.com/vendini/dukpt-php/tree/master/src/DUKPT/Test "tests").
 
 ## Notes ##
 
 Be aware that there are some DES/3DES/AES implementation differences between devices, as DES has many modes (ECB, CBC, CFB, OFB, ...). If it doesn't work, try another mode...
 
-This goal for this fork is to make the library compatible with PHP 7 and above.
+This is a fork of the camcima/dukpt-php project.  The camcima library works well but has not been updated for some time so the only goal for this fork is to make the library compatible with PHP 7 and above.

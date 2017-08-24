@@ -1,4 +1,4 @@
-# camcima/dukpt-php Tests #
+# vendini/dukpt-php Tests #
 
 To run the tests, execute `phpunit` in the library root folder.
 
@@ -6,7 +6,7 @@ Exepected result:
 
 > PHPUnit 3.7.19 by Sebastian Bergmann.
 > 
-> Configuration read from /home/camcima/dukpt-php/phpunit.xml.dist
+> Configuration read from /home/vendini/dukpt-php/phpunit.xml.dist
 > 
 > .........................
 > 
